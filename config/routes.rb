@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   resources :excels do
-    collection { post :import }
+    collection {
+      post :import
+      post :test  
+    }
   end
   root "excels#index"
   # The priority is based upon order of creation: first created -> highest priority.

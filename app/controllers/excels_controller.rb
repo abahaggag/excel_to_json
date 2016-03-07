@@ -11,4 +11,10 @@ class ExcelsController < ApplicationController
       format.json { render json: @data }
     end
   end
+  
+  def test
+    data = "aaab #{params[:data]}"
+    
+    render json: data
+  end
 end
